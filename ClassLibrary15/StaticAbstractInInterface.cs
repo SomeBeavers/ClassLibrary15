@@ -6,6 +6,7 @@ public interface IStaticAbstractInInterface<T> where T : new()
 
     static virtual T StaticVirtualMethod(string s)
     {
+        Console.WriteLine(s);
         return new T();
     }
 }

@@ -2,6 +2,13 @@
 
 public class UnsignedRightShift
 {
+    public UnsignedRightShift(int intProperty)
+    {
+        IntProperty = intProperty;
+    }
+
+    public static int IntProperty { get; set; }
+
     public void M(UnsignedRightShift x)
     {
         x >>>= 1;
@@ -16,6 +23,6 @@ public class UnsignedRightShift
 
     public static UnsignedRightShift operator >>> (UnsignedRightShift c, int t)
     {
-        return null;
+        return new UnsignedRightShift(IntProperty >> t);
     }
 }
