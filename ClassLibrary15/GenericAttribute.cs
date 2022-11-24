@@ -1,9 +1,9 @@
 ﻿namespace ClassLibrary15;
 
 [AttributeUsage(AttributeTargets.All, Inherited = false, AllowMultiple = true)]
-public sealed class GenericAttribute<T,U> : Attribute where T: ParentClass where U : struct
+public sealed class GenericAttribute<T,U> : Attribute where T: ParentClass
 {
-    public GenericAttribute(string name)
+    public GenericAttribute(U name)
     {
         Console.WriteLine(name);
     }
